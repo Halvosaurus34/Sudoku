@@ -1,22 +1,36 @@
-import logo from './logo.svg';
+import generator from "sudoku"
 import './App.css';
 
+window.generator = generator
+
+function generateSudoku() {
+  const raw = generator.makepuzzle()
+  const result = {rows: []}
+
+  for (let i=0; i<9;i++) {
+    const row = {cols: [], index: 1}
+
+    for (let j=0; j<9;j++) {
+      const value = raw[i*9+j]
+      const col = {
+        row:i,
+        col:j,
+        value: value,
+        readonly: value !== null
+      };
+      row.cols.push(col)
+    }
+    result.rows.push(row)
+  }
+  return result
+}
+
 function App() {
+  console.log(generateSudoku())
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Sudoku</h1>
       </header>
     </div>
   );
