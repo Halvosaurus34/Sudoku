@@ -16,6 +16,7 @@
 .App-header {
   background-color: #282c34;
   padding:2rem;
+  margin-bottom:2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +36,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.field {
+  width:3rem;
+  height:3rem;
+  font-size:2rem;
+  text-align:center;
 }
