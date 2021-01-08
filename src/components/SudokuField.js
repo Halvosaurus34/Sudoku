@@ -1,19 +1,25 @@
-import React from "react"
+import React, {Component} from "react"
 
-export default function SudokuField(props){
-        console.log("PROPS: ", props)
+export default class SudokuField extends Component{
+        state = {
+                value:this.props.value || "",
+                readOnly:this.props.readOnly,
+                key:this.props.key
+        }
+        // console.log("PROPS: ", props)
         // function handleChange(e){
         //         const value = value === "" ? "" : parseInt(e.target.value, 10);
 
         //         field.onChange({...field, value: value})
         // }
+        render(){
         return(
+                console.log(this.state),
             <input
                 className="field"
-                value={props.value || ""}
-                readOnly={props.readonly}
-                key={props.key}
-                
+                defaultValue={this.state.value || ""}
+                readOnly={this.state.readOnly}
+                key={this.state.key}
                 />
-        )   
+        )   }
 }
