@@ -43,4 +43,19 @@
   height:3rem;
   font-size:2rem;
   text-align:center;
+  color:#888;
 }
+
+.field[readonly] {
+  color:#222
+}
+
+.board {
+  width:31.5rem;
+  border-style:solid;
+  margin:auto;
+  
+}
+
+
+

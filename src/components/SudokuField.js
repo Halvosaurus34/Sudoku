@@ -2,14 +2,18 @@ import React from "react"
 
 export default function SudokuField(props){
         console.log("PROPS: ", props)
-        const field = props;
+        // function handleChange(e){
+        //         const value = value === "" ? "" : parseInt(e.target.value, 10);
+
+        //         field.onChange({...field, value: value})
+        // }
         return(
             <input
                 className="field"
-                field={field.value || ""}
-                value={field.value || ""}
-                readOnly={field.readonly}
-                key={field.key}
+                value={props.value || ""}
+                readOnly={props.readonly}
+                key={props.key}
+                
                 />
         )   
 }
