@@ -1,9 +1,12 @@
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { fa-pause-circle } from '@fortawesome/free-solid-svg-icons'
-
+import Timer from "../Timer"
 
 export default function PauseButton() {
+
+    function handleClick(){
+        console.log("PAUSE CLICK")
+    }
+
     return(
-            <li><button className="pauseButton"><i class="far fa-pause-circle fa-3x"></i></button></li>
+            <li><button className="pauseButton col-11" onClick={handleClick}><i class="far fa-pause-circle fa-3x"></i></button></li>
     )
 }

@@ -32,7 +32,7 @@ export default function SudokuField(props) {
                 const val = value === "" ? "" : parseInt(entry, 10);
                 if (!notes){
                         if (val === solved) {
-                                setStyle("white")
+                                setStyle("rgb(124, 230, 124)")
                                 getValues({defaultValue: val,
                                         readOnly:readOnly,
                                         row:row,

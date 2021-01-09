@@ -1,7 +1,7 @@
 import SudokuBoard from "./components/SudokuBoard"
-import NotesButton from "./components/Buttons/NotesButton"
 import ToolBar from "./components/ToolBar"
 import './App.css';
+import DiffAndTimeBar from "./components/DiffAndTime";
 
 function App() {
   return (
@@ -9,9 +9,13 @@ function App() {
       <header className="App-header">
         <h1>Sudoku</h1>
       </header>
+      <div className="container">
       <ToolBar></ToolBar>
       <SudokuBoard></SudokuBoard>
-      <NotesButton></NotesButton>
+      <DiffAndTimeBar></DiffAndTimeBar>
+      <div className="notesContainer">
+      </div>
+      </div>
 
     </div>
   );
