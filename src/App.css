@@ -48,7 +48,9 @@
 
   
 }
-
+.field:focus{
+  background:red;
+}
 .field[readonly] {
   color:#222
 }
@@ -67,16 +69,16 @@
 }
 
 .row:nth-child(6){
-  border-bottom:3px solid black
+  border-bottom:3px solid black 
 }
 
-/* .board {
-  width:31.5rem;
-  height:31.5rem;
-  border-style:solid;
+.board {
+  width:30.7rem;
+  height:29.7rem;
+  border: 3px solid black;
   margin:auto;
   
-} */
+}
 
 
 

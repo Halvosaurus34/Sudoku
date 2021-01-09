@@ -7,7 +7,9 @@ export default function SudokuBoard() {
     return(
         <div className="board">{puzzle.rows.map(row=>(
             <div className="row" key={row.index}> 
-            {row.cols.map(field=>SudokuField(field))}
+            {row.cols.map(field=>
+                <SudokuField defaultValue={field.value} readOnly={field.readonly} row={field.row} col={field.col}/>
+                )}
             </div>
         ))}
         </div>

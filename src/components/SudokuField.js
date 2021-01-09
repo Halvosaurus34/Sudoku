@@ -9,8 +9,8 @@ export default function SudokuField(props) {
         console.log("Cell (", props.row,",",props.col,"):", props)
 
         function getValues() {
-                setValue(props.value);
-                setReadOnly(props.readonly);
+                setValue(props.defaultValue);
+                setReadOnly(props.readOnly);
                 setRow(props.row);
                 setCol(props.col)
         }
