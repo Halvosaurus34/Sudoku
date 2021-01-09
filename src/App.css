@@ -39,8 +39,8 @@
 }
 
 .field {
-  width:3rem;
-  height:3rem;
+  width:2rem;
+  height:2rem;
   font-size:2rem;
   text-align:center;
   color:#888;
@@ -50,12 +50,13 @@
   color:#222
 }
 
-.board {
+/* .board {
   width:31.5rem;
+  height:31.5rem;
   border-style:solid;
   margin:auto;
   
-}
+} */
 
 
 

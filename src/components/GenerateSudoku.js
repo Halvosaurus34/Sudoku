@@ -1,7 +1,8 @@
 import sudoku from "sudoku"
 
 export default function generateSudoku() {
-    const raw = sudoku.makepuzzle()
+    var raw = sudoku.makepuzzle()
+    
     const result = {rows: []}
     
     for (let i=0; i<9;i++) {
