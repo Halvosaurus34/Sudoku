@@ -1,22 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  padding:2rem;
-  margin-bottom:0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -45,8 +36,6 @@
   text-align:center;
   color:#888;
   border:1px solid black
-
-  
 }
 
 .field:focus{
@@ -69,38 +58,19 @@
 .row:nth-child(3){
   border-bottom:3px solid black;
   margin:auto;
-  width:30.7rem
+  width:27rem
 
 }
 
 .row:nth-child(6){
   border-bottom:3px solid black;
   margin:auto;
-  width:30.7rem
+  width:27rem
 }
-
-
 
 .toolBar{
   list-style-type: none;
   text-align:center;
-  margin-left: 51.5rem;
-  font-size:3vh;
-  color:black;
-  padding: 0;
   display:flex;
+  justify-content: center;
 }
-
-
-
-
-/* .board {
-  width:30.7rem;
-  height:29.7rem;
-  border: 3px solid black;
-  margin:auto;
-  
-} */
-
-
-

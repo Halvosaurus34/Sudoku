@@ -38,7 +38,7 @@ export default function SudokuField(props) {
                                         row:row,
                                         col:col})
                         } else {
-                                setStyle("red")
+                                setStyle("rgb(230, 84, 84)")
                                 getValues({defaultValue: val,
                                         readOnly:readOnly,
                                         row:row,
