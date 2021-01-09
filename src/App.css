@@ -16,7 +16,7 @@
 .App-header {
   background-color: #282c34;
   padding:2rem;
-  margin-bottom:2rem;
+  margin-bottom:0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +84,7 @@
 .toolBar{
   list-style-type: none;
   text-align:center;
-  margin-left: 29rem;
+  margin-left: 51.5rem;
   font-size:3vh;
   color:black;
   padding: 0;
