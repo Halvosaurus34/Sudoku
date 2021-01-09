@@ -48,9 +48,11 @@
 
   
 }
+
 .field:focus{
-  background:red;
+  background:rgb(116, 218, 243);
 }
+
 .field[readonly] {
   color:#222
 }
@@ -65,20 +67,25 @@
 
 
 .row:nth-child(3){
-  border-bottom:3px solid black
+  border-bottom:3px solid black;
+  margin:auto;
+  width:30.7rem
+
 }
 
 .row:nth-child(6){
-  border-bottom:3px solid black 
+  border-bottom:3px solid black;
+  margin:auto;
+  width:30.7rem
 }
 
-.board {
+/* .board {
   width:30.7rem;
   height:29.7rem;
   border: 3px solid black;
   margin:auto;
   
-}
+} */
 
 
 
