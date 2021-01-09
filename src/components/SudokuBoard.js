@@ -1,8 +1,8 @@
 import GenerateSudoku from "./GenerateSudoku"
 import SudokuField from "./SudokuField.js"
+const puzzle = GenerateSudoku()
 
 export default function SudokuBoard() {
-    const puzzle = GenerateSudoku()
     console.log("Puzzle = " , puzzle.rows)
     return(
         <div className="board">{puzzle.rows.map(row=>(

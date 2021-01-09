@@ -1,14 +1,14 @@
 import React, { useEffect,useState } from "react";
 
-const SudokuField = (props) => {
+export default function SudokuField(props) {
         const [value, setValue] = useState();
         const [readOnly, setReadOnly] = useState();
         const [row, setRow] = useState();
         const [col, setCol] = useState();
 
-        console.log("PROPS:", props)
+        console.log("Cell (", props.row,",",props.col,"):", props)
 
-        const getValues = () => {
+        function getValues() {
                 setValue(props.value);
                 setReadOnly(props.readonly);
                 setRow(props.row);
@@ -17,6 +17,7 @@ const SudokuField = (props) => {
 
         useEffect(()=> {
                 getValues();
+                return
         }, [])
         // console.log("PROPS: ", props)
         // function handleChange(e){
@@ -34,4 +35,3 @@ const SudokuField = (props) => {
         )   }
 
 
-export default SudokuField;
