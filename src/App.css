@@ -79,17 +79,21 @@
   width:30.7rem
 }
 
-.notesButton{
-  margin-top:2rem;
-  background-color: #008CBA; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
+
+
+.toolBar{
+  list-style-type: none;
+  text-align:center;
+  margin-left: 29rem;
+  font-size:3vh;
+  color:black;
+  padding: 0;
+  display:flex;
 }
+
+
+
+
 /* .board {
   width:30.7rem;
   height:29.7rem;

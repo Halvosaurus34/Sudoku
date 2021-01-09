@@ -1,5 +1,6 @@
 import SudokuBoard from "./components/SudokuBoard"
-import NotesButton from "./components/NotesButton"
+import NotesButton from "./components/Buttons/NotesButton"
+import ToolBar from "./components/ToolBar"
 import './App.css';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Sudoku</h1>
       </header>
+      <ToolBar></ToolBar>
       <SudokuBoard></SudokuBoard>
       <NotesButton></NotesButton>
 
