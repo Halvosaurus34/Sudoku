@@ -4,7 +4,7 @@
 
 .App {
   text-align: center;
-  width:fit-content;
+  width:100%;
 }
 
 .App-header {
@@ -57,14 +57,13 @@
 }
 
 
-.row:nth-child(3){
+.row:nth-child(3) .field{
   border-bottom:3px solid black;
   margin:auto;
-  
 
 }
 
-.row:nth-child(6){
+.row:nth-child(6)  .field{
   border-bottom:3px solid black;
   margin:auto;
 }
@@ -95,4 +94,8 @@
   margin:0 auto;
   display:flex;
   flex-direction: column;
+}
+.board{
+  max-width:30rem;
+  margin:auto;
 }
