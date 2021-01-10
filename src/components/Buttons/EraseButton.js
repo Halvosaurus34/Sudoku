@@ -1,9 +1,8 @@
-import React, { useEffect,useState } from "react";
 
 export default function EraseButton() {
 
     function handleClick(){
-        console.log("click")
+        console.log("erase click")
     }
 
     return(

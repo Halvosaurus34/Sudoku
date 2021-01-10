@@ -17,9 +17,9 @@ export default function generateSudoku() {
           row:i,
           col:j,
           key:i*9+j,
-          value: value,
+          value: value === null ? '' : value+1,
           readOnly: value !== null,
-          solved:solved[i*9+j],
+          solved:(solved[i*9+j])+1,
           notes: ""
         };
         row.cols.push(col)

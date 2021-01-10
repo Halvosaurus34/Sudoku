@@ -154,7 +154,7 @@
     transition: all 0.3s ease 0s;
     }
 
-.numberButtons{
+.numberButtons, .oneButton, .twoButton, .threeButton, .fourButton, .fiveButton, .sixButton, .sevenButton, .eightButton, .nineButton{
     color: #fff !important;
     text-transform: uppercase;
     background: #60a3bc;
@@ -171,7 +171,7 @@
     justify-content: center;
 }
 
-.numberButtons:active {
+.numberButtons:active, .oneButton:active, .twoButton:active, .threeButton:active, .fourButton:active, .fiveButton:active, .sixButton:active, .sevenButton:active, .eightButton:active, .nineButton:active {
     background: #75eb8f;
     border:none;
     outline:none;

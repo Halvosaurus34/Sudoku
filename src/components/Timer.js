@@ -4,9 +4,6 @@ export default function Timer() {
     const {
       seconds,
       minutes,
-      start,
-      pause,
-      reset,
     } = useStopwatch({ autoStart: true });
       
       

@@ -1,5 +1,5 @@
 import React, { useEffect,useState } from "react";
-
+var mistakes = 0
 export default function SudokuField(props) {
         const [value, setValue] = useState();
         const [readOnly, setReadOnly] = useState();
@@ -9,7 +9,7 @@ export default function SudokuField(props) {
         const [style, setStyle] = useState();
         const [notes, setNotes] = useState();
         const [notesEnabled, setEnabled] = useState(false)
-
+        
         console.log("Cell (", props.row,",",props.col,"):", props)
 
         function getValues(val) {
@@ -28,21 +28,27 @@ export default function SudokuField(props) {
         }, [])
 
         function handleClick(e){
-                const entry = e.target.value
-                const val = value === "" ? "" : parseInt(entry, 10);
-                if (!notes){
-                        if (val === solved) {
+                console.log("handled click", value)
+                
+                const entry = Number(e.target.value)
+                if (value){
+                        console.log("VALUE PRESENT", value, "ENTRY: ", entry)
+                        return
+                } else if (!notes){
+                        if (entry === solved) {
                                 setStyle("rgb(124, 230, 124)")
-                                getValues({defaultValue: val,
-                                        readOnly:readOnly,
+                                getValues({defaultValue: entry,
+                                        readOnly:true,
                                         row:row,
                                         col:col})
-                        } else {
+                                        console.log("correct")
+                                        console.log("NEW VALUE: ", entry)
+                                        return
+                        } else if (entry !== 0){
                                 setStyle("rgb(230, 84, 84)")
-                                getValues({defaultValue: val,
-                                        readOnly:readOnly,
-                                        row:row,
-                                        col:col})
+                                mistakes++
+                                console.log("incorrect, total mistakes: ", mistakes)
+                                return
                         }
                 } else if (notes){
                         console.log("NOTES")
@@ -56,6 +62,7 @@ export default function SudokuField(props) {
         // }
         return(
             <input
+            type="number"
                 style={{background:style}}
                 className="field"
                 defaultValue={value || ""}
@@ -64,6 +71,7 @@ export default function SudokuField(props) {
                 notes={notes}
                 notesEnabled={notesEnabled}
                 onChange={handleClick}
+                
                 />
         )   }
 
