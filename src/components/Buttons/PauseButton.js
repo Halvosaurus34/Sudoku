@@ -6,6 +6,6 @@ export default function PauseButton() {
     }
 
     return(
-            <li><button className="pauseButton col-11" onClick={handleClick}><i class="far fa-pause-circle fa-3x"></i></button></li>
+            <li><button className="pauseButton col-11" onClick={handleClick}><i class="far fa-pause-circle fa-2x"></i></button></li>
     )
 }

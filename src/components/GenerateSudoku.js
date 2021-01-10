@@ -3,8 +3,8 @@ import sudoku from "sudoku"
 export default function generateSudoku() {
     var raw = sudoku.makepuzzle()
     var solved = sudoku.solvepuzzle(raw)
-    console.log(raw)
-    console.log(solved)
+    // console.log(raw)
+    // console.log(solved)
     const result = {rows: []}
     var ind = 1;
     for (let i=0; i<9;i++) {

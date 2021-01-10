@@ -3,17 +3,25 @@ import ToolBar from "./components/ToolBar"
 import './App.css';
 import DiffAndTimeBar from "./components/DiffAndTime";
 import NumberContainer from "./components/NumberContainer"
+import {useState} from "react"
+
 function App() {
+
+  const [notesEnabled, setNotesEnabled] = useState(false)
+
+  function handleChildClick(event) {
+      console.log("PARENT EVENT:",event)
+      setNotesEnabled(!event)
+      console.log("CALLED BACK TOP PARENT", event, notesEnabled)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Sudoku</h1>
-      </header>
       <div className="container">
       <ToolBar></ToolBar>
-      <SudokuBoard></SudokuBoard>
+      <SudokuBoard notesEnabled={notesEnabled}></SudokuBoard>
       <DiffAndTimeBar></DiffAndTimeBar>
-      <NumberContainer></NumberContainer>
+      <NumberContainer onChildClick={handleChildClick}></NumberContainer>
       <div className="notesContainer">
       </div>
       </div>

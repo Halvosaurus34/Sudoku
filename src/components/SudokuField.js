@@ -10,8 +10,8 @@ export default function SudokuField(props) {
         const [notes, setNotes] = useState();
         const [notesEnabled, setEnabled] = useState(false)
         
-        console.log("Cell (", props.row,",",props.col,"):", props)
-
+        // console.log("Cell (", props.row,",",props.col,"):", props)
+        console.log("field: ", props.notesEnabled, notesEnabled)
         function getValues(val) {
                 setValue(val.defaultValue);
                 setReadOnly(val.readOnly);
@@ -20,10 +20,12 @@ export default function SudokuField(props) {
                 setSolved(val.solved)
                 setNotes(val.notes);
                 setEnabled(val.notesEnabled)
+                console.log("UPDATED")
         }
 
         useEffect(()=> {
                 getValues(props);
+                setEnabled(props.notesEnabled)
                 return
         }, [])
 
@@ -43,6 +45,8 @@ export default function SudokuField(props) {
                                         col:col})
                                         console.log("correct")
                                         console.log("NEW VALUE: ", entry)
+                                        console.log("FIELD ENABLED: ",notesEnabled)
+
                                         return
                         } else if (entry !== 0){
                                 setStyle("rgb(230, 84, 84)")
@@ -69,7 +73,7 @@ export default function SudokuField(props) {
                 readOnly={readOnly}
                 key={(row)*9+(col)}
                 notes={notes}
-                notesEnabled={notesEnabled}
+                notesEnabled={props.notesEnabled}
                 onChange={handleClick}
                 
                 />

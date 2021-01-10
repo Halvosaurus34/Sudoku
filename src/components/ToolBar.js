@@ -14,8 +14,8 @@ export default function NotesButton() {
         <ul className="toolBar">
             <PauseButton></PauseButton>
             <HintButton></HintButton>
-            <SettingsButton></SettingsButton>
             <UndoButton></UndoButton>
+            <SettingsButton></SettingsButton>
         </ul>
     )
 }

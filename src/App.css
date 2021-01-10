@@ -7,16 +7,16 @@
   width:100%;
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: .5rem;;
   color: white;
   width:100%;
-}
+} */
 
 .App-link {
   color: #61dafb;
@@ -41,6 +41,7 @@
 
 .field:focus{
   background:rgb(116, 218, 243);
+  outline: none;
 }
 
 .field[readonly] {
@@ -72,8 +73,7 @@
   list-style-type: none;
   text-align:center;
   flex-direction: row;
-  margin-left:auto;
-  margin-right:auto;
+  justify-content:flex-end;
   padding:0;
 }
 
