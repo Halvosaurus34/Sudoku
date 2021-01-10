@@ -1,12 +1,12 @@
-import OneButton from "./OneButton"
-import TwoButton from "./TwoButton"
-import ThreeButton from "./ThreeButton"
-import FourButton from "./FourButton"
-import FiveButton from "./FiveButton"
-import SixButton from "./SixButton"
-import SevenButton from "./SevenButton"
-import EightButton from "./EightButton"
-import NineButton from "./NineButton"
+import OneButton from "./NumberButtons/OneButton"
+import TwoButton from "./NumberButtons/TwoButton"
+import ThreeButton from "./NumberButtons/ThreeButton"
+import FourButton from "./NumberButtons/FourButton"
+import FiveButton from "./NumberButtons/FiveButton"
+import SixButton from "./NumberButtons/SixButton"
+import SevenButton from "./NumberButtons/SevenButton"
+import EightButton from "./NumberButtons/EightButton"
+import NineButton from "./NumberButtons/NineButton"
 
 
 export default function Numbers() {
