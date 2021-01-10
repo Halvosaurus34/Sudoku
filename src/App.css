@@ -99,3 +99,11 @@
   max-width:30rem;
   margin:auto;
 }
+
+.numbersContainer {
+  display:flex;
+  justify-self: end;
+  border:2px solid black;
+  margin:.5rem;
+  border-radius: 5px;
+}

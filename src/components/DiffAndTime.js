@@ -9,8 +9,7 @@ export default function DiffAndTimeBar() {
         <Difficulty></Difficulty>
         <Timer></Timer>
         </div>
-        <NotesButton></NotesButton>
-        <EraseButton></EraseButton>
+        
         </div>
     )
 }
