@@ -34,17 +34,19 @@
   background:yellow;
 }
 .field {
-  width:2.3rem !important;
-  height:2.3rem !important;
+  width:2.3rem;
   font-size:1.7rem;
   position:relative;
+  padding:0;
   text-align:center;
   color:#888;
   background:white;
   border:1px solid black;
 }
 .row{
-  height:2.3rem !important;
+  height:2.3rem;
+  display:flex;
+  flex-direction: row;
 }
 .field:focus{
   background:rgb(116, 218, 243);
@@ -102,7 +104,7 @@
   flex-direction: column;
 }
 .board{
-  max-width:30rem;
+  height:20.6rem;
   margin:auto;
 }
 

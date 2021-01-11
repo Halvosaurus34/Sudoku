@@ -55,9 +55,10 @@ export default function SudokuField(props) {
                 } else if (notesEnabled){
                         console.log("NOTES")
                         setStyle({background:"yellow",
-                                fontSize:".8rem",
+                                fontSize:".7rem",
                                 textAlign:"left",
-                                bottom:"4.8px"})
+                                verticalAlign:"top",
+                                paddingBottom:"1.4rem"})
                 }
         }
         // console.log("PROPS: ", props)
