@@ -3,6 +3,6 @@ export default function TwoButton() {
         console.log("two click")
     }
     return(
-        <li className="twoButton" onClick={handleTwo}>2</li>
+        <li className="twoButton" onClick={handleTwo} key="two">2</li>
     )
 }

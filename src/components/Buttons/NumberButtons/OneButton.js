@@ -3,6 +3,6 @@ export default function OneButton() {
         console.log("one click")
     }
     return(
-        <li className="oneButton" onClick={handleClick}>1</li>
+        <li className="oneButton" onClick={handleClick} key="one">1</li>
     )
 }

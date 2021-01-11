@@ -3,6 +3,6 @@ export default function NineButton() {
         console.log("nine click")
     }
     return(
-        <li className="nineButton" onClick={handleNine}>9</li>
+        <li className="nineButton" onClick={handleNine} key="nine">9</li>
     )
 }

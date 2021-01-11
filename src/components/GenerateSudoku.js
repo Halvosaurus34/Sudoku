@@ -14,8 +14,8 @@ export default function generateSudoku() {
       for (let j=0; j<9;j++) {
         const value = raw[i*9+j]
         const col = {
-          row:i,
-          col:j,
+          row:i+1,
+          col:j+1,
           key:i*9+j,
           value: value === null ? '' : value+1,
           readOnly: value !== null,

@@ -9,6 +9,7 @@ export default function NotesButton(props) {
     }
     
     return(
-        <button className="notesButton" onClick={handleClick}><i class="fas fa-pencil-alt fa-3x"></i></button>
+        <button className="notesButton" onClick={handleClick}><i className="fas fa-pencil-alt fa-3x"></i></button>
     )
 }
+

@@ -6,6 +6,6 @@ export default function EraseButton() {
     }
 
     return(
-        <button className="eraseButton" onClick={handleClick}><i class="fas fa-eraser fa-3x"></i></button>
+        <button className="eraseButton" onClick={handleClick}><i className="fas fa-eraser fa-3x"></i></button>
     )
 }

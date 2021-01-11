@@ -1,6 +1,7 @@
 import SudokuBoard from "./components/SudokuBoard"
 import ToolBar from "./components/ToolBar"
 import './App.css';
+import './components/Buttons/Buttons.css'
 import DiffAndTimeBar from "./components/DiffAndTime";
 import NumberContainer from "./components/NumberContainer"
 import {useState} from "react"
@@ -19,9 +20,9 @@ function App() {
     <div className="App">
       <div className="container">
       <ToolBar></ToolBar>
-      <SudokuBoard notesEnabled={notesEnabled}></SudokuBoard>
+      <SudokuBoard notesEnabled={notesEnabled} ></SudokuBoard>
       <DiffAndTimeBar></DiffAndTimeBar>
-      <NumberContainer onChildClick={handleChildClick}></NumberContainer>
+      <NumberContainer onChildClick={handleChildClick} onChange={SudokuBoard}></NumberContainer>
       <div className="notesContainer">
       </div>
       </div>

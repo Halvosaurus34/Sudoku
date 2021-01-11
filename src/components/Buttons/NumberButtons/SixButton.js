@@ -3,6 +3,6 @@ export default function SixButton() {
         console.log("six click")
     }
     return(
-        <li className="sixButton" onClick={handleSix}>6</li>
+        <li className="sixButton" onClick={handleSix} key="six">6</li>
     )
 }

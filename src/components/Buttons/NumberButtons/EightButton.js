@@ -3,6 +3,6 @@ export default function EightButton() {
         console.log("eight click")
     }
     return(
-        <li className="eightButton" onClick={handleEight}>8</li>
+        <li className="eightButton" onClick={handleEight} key="eight">8</li>
     )
 }

@@ -30,15 +30,22 @@
     transform: rotate(360deg);
   }
 }
-
+#notesEnabled{
+  background:yellow;
+}
 .field {
-  width:10%;
+  width:2.3rem !important;
+  height:2.3rem !important;
   font-size:1.7rem;
+  position:relative;
   text-align:center;
   color:#888;
-  border:1px solid black
+  background:white;
+  border:1px solid black;
 }
-
+.row{
+  height:2.3rem !important;
+}
 .field:focus{
   background:rgb(116, 218, 243);
   outline: none;

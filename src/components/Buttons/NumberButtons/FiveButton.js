@@ -3,6 +3,6 @@ export default function FiveButton() {
         console.log("five click")
     }
     return(
-        <li className="fiveButton" onClick={handleFive}>5</li>
+        <li className="fiveButton" onClick={handleFive} key="five">5</li>
     )
 }

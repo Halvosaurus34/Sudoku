@@ -27,10 +27,9 @@
     outline:none;
 
 }
-.notesButton:active {
+.field .notesbutton:focus{
     background: #75eb8f;
-    border:none;
-    outline:none;
+
 }
 
 .eraseButton{

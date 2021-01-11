@@ -3,6 +3,6 @@ export default function SevenButton() {
         console.log("seven click")
     }
     return(
-        <li className="sevenButton" onClick={handleSeven}>7</li>
+        <li className="sevenButton" onClick={handleSeven} key="seven">7</li>
     )
 }

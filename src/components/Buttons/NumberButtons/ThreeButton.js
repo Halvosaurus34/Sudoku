@@ -3,6 +3,6 @@ export default function ThreeButton() {
         console.log("three click")
     }
     return(
-        <li className="threeButton" onClick={handleThree}>3</li>
+        <li className="threeButton" onClick={handleThree} key="three">3</li>
     )
 }
