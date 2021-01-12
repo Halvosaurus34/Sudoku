@@ -1,81 +1,81 @@
 import React, { useEffect,useState } from "react";
 var mistakes = 0
+
 export default function SudokuField(props) {
+
+
         const [value, setValue] = useState();
-        const [readOnly, setReadOnly] = useState(false);
+        const [readOnly, setReadOnly] = useState();
         const [row, setRow] = useState();
         const [col, setCol] = useState();
         const [solved, setSolved] = useState();
         const [style, setStyle] = useState({});
-        const [notes, setNotes] = useState();
         const [notesEnabled, setEnabled] = useState(false)
         // console.log("Cell (", props.row,",",props.col,"):", props)
-        function getValues(){
-                setValue(props.defaultValue);
-                setReadOnly(props.readOnly);
-                setRow(props.row);
-                setCol(props.col);
-                setSolved(props.solved)
-                setNotes(props.notes);
-                setEnabled(props.notesEnabled)
-                console.log("UPDATED FIELD", props.notesEnabled)
+        function getValues(val){
+                setValue(val.defaultValue);
+                setReadOnly(val.readOnly);
+                setRow(val.row);
+                setCol(val.col);
+                setSolved(val.solved)
+                setEnabled(val.notesEnabled)
+                // console.log(val)
         }
-
-        useEffect(()=> {
-                getValues()
-                
-        })
         
+        useEffect(()=> {
+                getValues(props)  
+                // console.log("PROPSOBJ: ",propsObject)
+              
+        })
 
 
         function handleClick(e){
-                console.log("handled click", value)
-                const entry = Number(e.target.value) || ""
-                if (value){
-                        console.log("VALUE PRESENT", value, "ENTRY: ", entry)
-                        return
-                } else if (!notesEnabled){
+                const entry = Number(e.target.value) || null
+                if (!notesEnabled){
                         if (entry === solved) {
-                                setStyle({background: "rgb(124, 230, 124)"})
                                 getValues({defaultValue: entry,
                                         readOnly:true,
                                         row:row,
-                                        col:col})
-                                        console.log("correct")
-                                        console.log("NEW VALUE: ", entry)
-                                        console.log("FIELD ENABLED: ",notesEnabled)
+                                        col:col,
+                                        solved:solved,
+                                        notesEnabled:false})
+                                        setStyle({background: "rgb(124, 230, 124)",
+                                textAlign:"center"})
 
-                                        return
                         } else if (entry !== 0){
                                 setStyle({background:"rgb(230, 84, 84)"})
+                                getValues({defaultValue: entry,
+                                        readOnly:false,
+                                        row:row,
+                                        col:col})
+
                                 mistakes++
                                 console.log("incorrect, total mistakes: ", mistakes)
-                                return
                         }
-                } else if (notesEnabled){
+                } else{
                         console.log("NOTES")
-                        setStyle({background:"yellow",
+
+                        setStyle({
                                 fontSize:".7rem",
                                 textAlign:"left",
-                                verticalAlign:"top",
                                 paddingBottom:"1.4rem"})
                 }
         }
-        // console.log("PROPS: ", props)
-        // function handleChange(e){
-        //         const value = value === "" ? "" : parseInt(e.target.value, 10);
+        // var propsObject = {defaultValue:props.defaultValue,
+        //         readOnly:props.readOnly,
+        //         row:props.row,
+        //         col:props.col,
+        //         solved:props.solved,
+        //         notesEnabled:props.notesEnabled}
 
-        //         field.onChange({...field, value: value})
-        // }
         return(
             <input
-            type="number"
+                type="number"
                 style={style}
                 className="field"
                 defaultValue={value || ""}
                 readOnly={readOnly}
                 key={(row)*9+(col)}
-                notes={notes}
                 notesEnabled={notesEnabled}
                 onChange={handleClick}
                 

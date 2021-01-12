@@ -1,10 +1,11 @@
-import Difficulty from "./Difficulty"
 import Timer from "./Timer"
 
-export default function DiffAndTimeBar() {
+export default function DiffAndTimeBar(props) {
+    const difficulty =  <div className="difficulty">Hard</div>
+
     return(<div className="diffAndTime">
         <div className="timeAndDiff">
-        <Difficulty></Difficulty>
+        {difficulty}
         <Timer></Timer>
         </div>
         

@@ -11,7 +11,7 @@ import NineButton from "./NumberButtons/NineButton"
 
 export default function Numbers() {
     return(
-    <ul>
+    <ul className="numbers">
         <OneButton></OneButton>
         <TwoButton></TwoButton>
         <ThreeButton></ThreeButton>

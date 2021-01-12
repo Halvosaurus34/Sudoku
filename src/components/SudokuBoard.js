@@ -4,10 +4,8 @@ import SudokuField from "./SudokuField.js"
 const puzzle = GenerateSudoku()
 
 export default function SudokuBoard(props) {
-    // console.log("Puzzle = " , puzzle.rows)
-    console.log("board",props.notesEnabled)
-    
 
+    // console.log("Puzzle = " , puzzle.rows)
 
 
     return(

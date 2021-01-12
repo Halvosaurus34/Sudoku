@@ -9,7 +9,6 @@ import {useState} from "react"
 function App() {
 
   const [notesEnabled, setNotesEnabled] = useState(false)
-
   function handleChildClick(event) {
       console.log("PARENT EVENT:",event)
       setNotesEnabled(!event)
@@ -20,7 +19,7 @@ function App() {
     <div className="App">
       <div className="container">
       <ToolBar></ToolBar>
-      <SudokuBoard notesEnabled={notesEnabled} ></SudokuBoard>
+      <SudokuBoard notesEnabled={notesEnabled}></SudokuBoard>
       <DiffAndTimeBar></DiffAndTimeBar>
       <NumberContainer onChildClick={handleChildClick} onChange={SudokuBoard}></NumberContainer>
       <div className="notesContainer">

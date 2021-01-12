@@ -42,6 +42,13 @@
   color:#888;
   background:white;
   border:1px solid black;
+  margin:0px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .row{
   height:2.3rem;
@@ -73,22 +80,24 @@
 }
 
 .row:nth-child(6)  .field{
-  border-bottom:3px solid black;
+  border-bottom:4px solid black;
   margin:auto;
 }
 
 .toolBar{
   display:flex;
   list-style-type: none;
-  text-align:center;
   flex-direction: row;
   justify-content:flex-end;
   padding:0;
+  margin:auto;
+  margin-top:16px;
+  margin-bottom:16px;
 }
 
 .diffAndTime{
   width: 90%;
-  max-width: 400px;
+  max-width:20rem;
   margin:0 auto;
 }
 
@@ -113,6 +122,11 @@
   justify-self: end;
   margin:.5rem;
   border-radius: 5px;
-  max-width:25rem;
+  max-width:20rem;
   margin:auto;
+  padding:0;
+}
+
+.numbers{
+  padding:0;
 }

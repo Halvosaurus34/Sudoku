@@ -5,7 +5,10 @@ export default function generateSudoku() {
     var solved = sudoku.solvepuzzle(raw)
     // console.log(raw)
     // console.log(solved)
-    const result = {rows: []}
+    const result = {rows: [],
+    solution:solved,
+    timeStart: new Date(),
+    timeSolved: null}
     var ind = 1;
     for (let i=0; i<9;i++) {
       
