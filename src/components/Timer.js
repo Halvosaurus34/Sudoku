@@ -1,17 +1,16 @@
-import { useStopwatch } from 'react-timer-hook';
+import ReactStopwatch from 'react-stopwatch';
 
-export default function Timer() {
-    const {
-      seconds,
-      minutes,
-    } = useStopwatch({ autoStart: true });
-      
-      
-        return (
-            <div className="timer">
-              <div >
-               TIME: <span>{minutes}</span>:<span>{seconds}</span>
-              </div>
-            </div>
-          );
-        }
+const Timer = () => (
+  <ReactStopwatch
+    seconds={0}
+    minutes={0}
+    hours={0}
+    render={({ formatted }) => {
+      return (
+        <span>TIME {formatted}</span>
+      );
+    }}
+   />
+);
+ 
+export default Timer;

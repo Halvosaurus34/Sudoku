@@ -8,18 +8,18 @@ import {useState} from "react"
 
 function App() {
 
-  const [notesEnabled, setNotesEnabled] = useState(false)
+  const [notesenabled, setNotesEnabled] = useState(false)
   function handleChildClick(event) {
       console.log("PARENT EVENT:",event)
       setNotesEnabled(!event)
-      console.log("CALLED BACK TOP PARENT", event, notesEnabled)
+      console.log("CALLED BACK TOP PARENT", event, notesenabled)
   }
 
   return (
     <div className="App">
       <div className="container">
       <ToolBar></ToolBar>
-      <SudokuBoard notesEnabled={notesEnabled}></SudokuBoard>
+      <SudokuBoard notesenabled={notesenabled}></SudokuBoard>
       <DiffAndTimeBar></DiffAndTimeBar>
       <NumberContainer onChildClick={handleChildClick} onChange={SudokuBoard}></NumberContainer>
       <div className="notesContainer">

@@ -1,10 +1,10 @@
 import  {useState} from "react"
 
 export default function NotesButton(props) {
-    const [notesEnabled, setNotesEnabled] = useState(false)
+    const [notesenabled, setNotesEnabled] = useState(false)
     function handleClick(){
-        setNotesEnabled(!notesEnabled)
-        props.onChildClick(notesEnabled)
+        setNotesEnabled(!notesenabled)
+        props.onChildClick(notesenabled)
     }
     
     return(

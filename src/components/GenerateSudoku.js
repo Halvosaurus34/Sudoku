@@ -3,6 +3,8 @@ import sudoku from "sudoku"
 export default function generateSudoku() {
     var raw = sudoku.makepuzzle()
     var solved = sudoku.solvepuzzle(raw)
+    var difficulty = sudoku.ratepuzzle(raw, 1)
+    console.log("DIFFICULTY: ",difficulty)
     // console.log(raw)
     // console.log(solved)
     const result = {rows: [],
