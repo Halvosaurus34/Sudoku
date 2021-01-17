@@ -5,7 +5,9 @@ export default function SudokuField(props) {
 
 
         const [value, setValue] = useState();
+        const [preValue, setpreValue] = useState();
         const [readOnly, setReadOnly] = useState();
+        const [preReadOnly, setPreReadOnly] = useState();
         const [row, setRow] = useState();
         const [col, setCol] = useState();
         const [solved, setSolved] = useState();
@@ -21,11 +23,17 @@ export default function SudokuField(props) {
                 setSolved(val.solved)
                 setEnabled(val.notesenabled)
                 setBox(val.box)
-                // console.log(val)
+                console.log(val)
         }
         
         useEffect(()=> {
                 getValues(props)  
+                // console.log("PROPSOBJ: ",propsObject)
+              
+        }, [])
+
+        useEffect(()=> {
+                setEnabled(props.notesenabled)  
                 // console.log("PROPSOBJ: ",propsObject)
               
         })
@@ -40,7 +48,7 @@ export default function SudokuField(props) {
                                         row:row,
                                         col:col,
                                         solved:solved,
-                                        notesEnabled:false})
+                                        notesenabled:false})
                                         setStyle({background: "rgb(124, 230, 124)",
                                 textAlign:"center"})
 
@@ -49,7 +57,9 @@ export default function SudokuField(props) {
                                 getValues({defaultValue: entry,
                                         readOnly:false,
                                         row:row,
-                                        col:col})
+                                        col:col,
+                                        notesenabled:false,
+                                        solved:solved})
 
                                 mistakes++
                                 console.log("incorrect, total mistakes: ", mistakes)
