@@ -40,6 +40,7 @@ export default function SudokuField(props) {
 
 
         function handleClick(e){
+                console.log("VALUE: ",e.target.value)
                 const entry = Number(e.target.value) || null
                 if (!notesenabled){
                         if (entry === solved) {
@@ -49,11 +50,10 @@ export default function SudokuField(props) {
                                         col:col,
                                         solved:solved,
                                         notesenabled:false})
-                                        setStyle({background: "rgb(124, 230, 124)",
+                                        setStyle({color: "blue",
                                 textAlign:"center"})
-
-                        } else if (entry !== 0){
-                                setStyle({background:"rgb(230, 84, 84)"})
+                        } else if (entry !== 0 && entry !== null){
+                                setStyle({color:"rgb(230, 84, 84)"})
                                 getValues({defaultValue: entry,
                                         readOnly:false,
                                         row:row,
