@@ -1,16 +1,15 @@
-import ReactStopwatch from 'react-stopwatch';
+import StopWatch from 'react-compound-timer'
 
-const Timer = () => (
-  <ReactStopwatch
-    seconds={0}
-    minutes={0}
-    hours={0}
-    render={({ formatted }) => {
+export default function Timer(){
+  
       return (
-        <span>TIME {formatted}</span>
-      );
-    }}
-   />
+        <div>
+          TIME {" "}
+        <StopWatch formatValue={(value) => `${(value < 10 ? `0${value}` : value)}`}>
+        
+          <StopWatch.Minutes/>:
+          <StopWatch.Seconds />
+        </StopWatch>
+        </div>
 );
- 
-export default Timer;
+      }
