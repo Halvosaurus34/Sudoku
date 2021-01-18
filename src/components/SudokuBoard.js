@@ -5,14 +5,16 @@ const puzzle = GenerateSudoku()
 
 export default function SudokuBoard(props) {
 
-    // console.log("Puzzle = " , puzzle.rows)
-
+    function handleChildClick(event) {
+        console.log("CONT EVENT: ",event)
+        props.onChildClick(event)
+    }
 
     return(
         <div className="board">{puzzle.rows.map(row=>(
-            <div className="row" key={row.index}> 
+            <div className="row" key={row.index+10}> 
             {row.cols.map(field=>
-                <SudokuField defaultValue={field.value} box={field.box} readOnly={field.readOnly} row={field.row} col={field.col} solved={field.solved} notesenabled={props.notesenabled}/>
+                <SudokuField onChildClick={handleChildClick} defaultValue={field.value} solved={field.solved} box={field.box} readOnly={field.readOnly} row={field.row} col={field.col} notesenabled={props.notesenabled}/>
                 )}
             </div>
         ))}

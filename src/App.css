@@ -56,7 +56,7 @@ input::-webkit-inner-spin-button {
   flex-direction: row;
 }
 .field:focus{
-  background:rgb(116, 218, 243);
+  background:rgb(245, 245, 134);
   outline: none;
 }
 
