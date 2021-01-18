@@ -1,20 +1,15 @@
 import GenerateSudoku from "./GenerateSudoku"
 import SudokuField from "./SudokuField.js"
-import React, { useEffect,useState } from "react";
-
-// import SolveSudoku from "./SolveSudoku"
+import React, { useEffect } from "react";
 
 export default function SudokuBoard(props) {
     const puzzle = GenerateSudoku()
 
     useEffect(()=> {
-        
         props.onChildLoad(puzzle.difficulty)
-
-}, [])
+    }, [])
 
     function handleChildClick(event) {
-        console.log("CONT EVENT: ",event)
         props.onChildClick(event)
     }
 

@@ -3,9 +3,7 @@ import EraseButton from "./Buttons/EraseButton"
 import Numbers from "./Buttons/Numbers"
 export default function NumberContainer(props) {
 
-
     function handleChildClick(event) {
-        console.log("CONT EVENT: ",event)
         props.onChildClick(event)
     }
 

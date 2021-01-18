@@ -4,16 +4,14 @@ var mistakes = 0
 export default function SudokuField(props) {
 
         const [value, setValue] = useState();
-        const [preValue, setpreValue] = useState();
         const [readOnly, setReadOnly] = useState();
-        const [preReadOnly, setPreReadOnly] = useState();
         const [row, setRow] = useState();
         const [col, setCol] = useState();
         const [solved, setSolved] = useState();
         const [style, setStyle] = useState();
         const [notesenabled, setEnabled] = useState(false)
         const [box, setBox] = useState()
-        // console.log("Cell (", props.row,",",props.col,"):", props)
+
         function getValues(val){
                 setValue(val.defaultValue);
                 setSolved(val.solved)
@@ -22,26 +20,18 @@ export default function SudokuField(props) {
                 setCol(val.col);
                 setEnabled(val.notesenabled)
                 setBox(val.box)
-                
-                // console.log(val)
         }
         
         useEffect(()=> {
                 getValues(props)  
-                // console.log("PROPSOBJ: ",propsObject)
-              
         }, [])
 
         useEffect(()=> {
                 setEnabled(props.notesenabled)  
-                // console.log("PROPSOBJ: ",propsObject)
-              
         })
 
         function handleChange(e){
-                console.log("INSIDE HANDLE CHANGE")
                 e.preventDefault();
-                console.log("VALUE: ",e.target.value)
                 const entry = Number(e.target.value) || null
                 if (!notesenabled){
                         if (entry === solved) {
@@ -81,7 +71,6 @@ export default function SudokuField(props) {
                 col:col,
                 box:box
                 }
-                console.log("INSIDE HANDLECLICK:",cellValues)
                 props.onChildClick(cellValues)
         }
 
@@ -97,11 +86,9 @@ export default function SudokuField(props) {
                 key={(row)*9+(col)}
                 notesnabled={notesenabled}
                 onInput={handleChange}
-                onCLick={console.log("CLICK")}
                 box={box}
                 row={row}
                 col={col}
-                
                 />
         )   }
 

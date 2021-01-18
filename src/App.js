@@ -10,17 +10,15 @@ function App() {
 
   const [notesenabled, setNotesEnabled] = useState(false)
   const [difficulty, setDifficulty] = useState()
+
   function handleChildClick(event) {
-      console.log("PARENT EVENT:",event)
       setNotesEnabled(!event)
-      console.log("CALLED BACK TOP PARENT", event, notesenabled)
   }
 
-    function handleChildLoad(diff){
-      setDifficulty(diff)
-      console.log("SET DIFF: ", diff)
+  function handleChildLoad(diff){
+    setDifficulty(diff)
+  }
 
-    }
   return (
     <div className="App">
       <div className="container">

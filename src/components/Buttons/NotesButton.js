@@ -5,17 +5,15 @@ export default function NotesButton(props) {
     const green = {background: "#75eb8f"}
 
     const [notesenabled, setNotesEnabled] = useState(false)
-    const [buttonColor, setButtonColor] = useState(false)
+    const [isSelected, setIsSelected] = useState(false)
     const [style, setStyle] = useState()
+    
     function handleClick(){
-        console.log(buttonColor)
-        if (buttonColor === false){
-            console.log("change to green")
-            setButtonColor(true)
+        if (isSelected === false){
+            setIsSelected(true)
             setStyle(green)
         } else{
-            console.log("change to blue")
-            setButtonColor(false)
+            setIsSelected(false)
             setStyle(blue)
 
         }

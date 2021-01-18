@@ -4,15 +4,14 @@ export default function generateSudoku() {
     var raw = sudoku.makepuzzle()
     var solved = sudoku.solvepuzzle(raw)
     const difficulty = sudoku.ratepuzzle(raw, 1)
-    // console.log("DIFFICULTY: ",difficulty)
-    // console.log(raw)
-    // console.log(solved)
+    var ind = 1;
+    
     const result = {rows: [],
     solution:solved,
     timeStart: new Date(),
     timeSolved: null,
     difficulty:difficulty}
-    var ind = 1;
+
     for (let i=0; i<9;i++) {
       const row = {cols: [], index: ind}
       ind++
