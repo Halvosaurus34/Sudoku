@@ -67,9 +67,10 @@ export default function SudokuField(props) {
                         }
                 } else{
                         setStyle({
-                                fontSize:".7rem",
+                                fontSize:".8rem",
                                 textAlign:"left",
-                                paddingBottom:"1.4rem"})
+                                paddingBottom:"1.4rem",
+                        color:"black"})
                 }
         }
 
